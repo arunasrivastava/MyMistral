@@ -1,7 +1,7 @@
 import pdfplumber
 import re
 import json
-
+import random
 
 def extract_text_from_pdf(pdf_path, start_page, end_page):
     extracted_text = []
@@ -68,12 +68,26 @@ end_page = 105  # Specify the ending page number
 # Extract text from PDF
 text_list = extract_text_from_pdf(pdf_path, start_page, end_page)
 
-# Format text as JSONL
-jsonl_data = format_as_jsonl(text_list)
+# Shuffle the text list
+random.shuffle(text_list)
 
-# Specify the path where you want to save the JSONL file
-jsonl_file_path = "book1_notes.jsonl"
+# Split the data into training and validation sets (80-20 split)
+split_index = int(len(text_list) * 0.8)
+train_text = text_list[:split_index]
+validation_text = text_list[split_index:]
 
-# Write JSONL data to a file
-with open(jsonl_file_path, "w") as jsonl_file:
-    jsonl_file.write(jsonl_data)
+# Format text as JSONL for training set
+train_jsonl_data = format_as_jsonl(train_text)
+# Format text as JSONL for validation set
+validation_jsonl_data = format_as_jsonl(validation_text)
+
+# Specify the paths where you want to save the JSONL files
+train_jsonl_file_path = "notes_train.jsonl"
+validation_jsonl_file_path = "notes_validation.jsonl"
+
+# Write JSONL data to files
+with open(train_jsonl_file_path, "w") as train_jsonl_file:
+    train_jsonl_file.write(train_jsonl_data)
+
+with open(validation_jsonl_file_path, "w") as validation_jsonl_file:
+    validation_jsonl_file.write(validation_jsonl_data)
