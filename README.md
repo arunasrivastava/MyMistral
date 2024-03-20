@@ -5,7 +5,7 @@
 
 💻 Using Mistral 7B, I fine-tuned with data scraped from my favorite book by Mark Manson ;) 
 
-**Here is one of my favorite outputs: **
+_Here is one of my favorite outputs:_
 
 **Prompt:** "How to show self-compassion: "
 
@@ -14,10 +14,10 @@
 
 **For the same prompt, we get a more generic response from GPT-3.5:** 
 
->> "Showing self-compassion involves treating yourself with kindness, understanding, and acceptance, especially in times of difficulty or failure. Start by acknowledging your struggles and validating your emotions without judgment. Practice self-care activities that nurture your physical, emotional, and mental well-being. Challenge negative self-talk by speaking to yourself with the same kindness you would offer a friend. Cultivate mindfulness to observe your thoughts and feelings without getting caught up in them. Set boundaries to prioritize your needs and avoid self-criticism. Practice forgiveness, letting go of past mistakes and embracing your humanity. Remember that self-compassion is a skill that can be cultivated through practice and patience, and it's essential for fostering resilience and overall well-being"
+> "Showing self-compassion involves treating yourself with kindness, understanding, and acceptance, especially in times of difficulty or failure. Start by acknowledging your struggles and validating your emotions without judgment. Practice self-care activities that nurture your physical, emotional, and mental well-being. Challenge negative self-talk by speaking to yourself with the same kindness you would offer a friend. Cultivate mindfulness to observe your thoughts and feelings without getting caught up in them. Set boundaries to prioritize your needs and avoid self-criticism. Practice forgiveness, letting go of past mistakes and embracing your humanity. Remember that self-compassion is a skill that can be cultivated through practice and patience, and it's essential for fostering resilience and overall well-being"
 
 I love that fine-tuned Mistral produces an output that you could imagine a friend saying, occasionally using explicit humor as well. 
 
 🧠 With double quantization from QLoRA, this can be done on cheaper GPUs which brev gives you access to. It's a better colab pro, consider checking it out if you want to have fun with ml/ai projects and need better GPU alternatives!
 
-🤟🏽 Special thanks to Harper Carroll at Brev.dev for sharing this cool guide on fine-tuning with Mistral! It's a fun introduction to LLMs, highly recommend checking it out here: https://lnkd.in/eZc7ef-4
+🤟🏽 Special thanks to Harper Carroll at Brev.dev for sharing this cool guide on fine-tuning with Mistral! It's a fun introduction to LLMs, highly recommend checking it out [here:](https://lnkd.in/eZc7ef-4)
